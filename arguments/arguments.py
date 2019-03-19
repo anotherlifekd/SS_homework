@@ -31,14 +31,14 @@ def parse():
     parser.add_argument('--triangle_c', nargs='?', dest='triangle_c', help='Geron triangle. Set C side:', default='def')
 
     # FILES
-    parser.add_argument('--files_name', nargs='?', dest='files_name', help='Files. Set name:', default='0')
-    parser.add_argument('--mod', nargs='?', dest='mod', help='Files. Set mod:', default='0')
+    parser.add_argument('--files_name', nargs='?', dest='files_name', help='Files. Set name:', default='def')
+    parser.add_argument('--mod', nargs='?', dest='mod', help='Files. Set mod:', default='def')
     parser.add_argument('--string_for_count', nargs='?', dest='string_for_count',
-                        help='Files. Set a string:', default='0')
+                        help='Files. Set a string:', default='def')
     parser.add_argument('--string_for_search', nargs='?', dest='string_for_search',
-                        help='Files. Set search string:', default='0')
+                        help='Files. Set search string:', default='def')
     parser.add_argument('--string_for_replace', nargs='?', dest='string_for_replace',
-                        help='Files. Set replace string:', default='0')
+                        help='Files. Set replace string:', default='def')
 
     # SEQUENCE
     parser.add_argument('--n', nargs='?', dest='n', help='Sequence. Set n:', default='default')
