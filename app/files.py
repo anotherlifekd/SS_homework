@@ -64,8 +64,7 @@ def check_files(args):
                         '/ type anything else to exit): ').lower()
             if mod == 'c':
                 try:
-                    direction_count = input('<direction of your file>, <counted string>: ').replace(' ', '') \
-                        .split(',')
+                    direction_count = input('<direction of your file>, <counted string>: ').replace(' ', '').split(',')
                     args = argparse.Namespace(files_name=direction_count[0], mod=mod,
                                               string_for_count=direction_count[1], string_for_search='def',
                                               string_for_replace='def')
@@ -74,22 +73,21 @@ def check_files(args):
                 except IndexError:
                     print('Enter the correct parameters')
                     continue
-                except IsADirectoryError:
-                    print('Is a directory')
-                    continue
             elif mod == 'r':
                 try:
-                    direction_replace = input(
-                        '<direction of your file>, <search string>, <replace string>: ').replace \
-                        (' ', '').split(',')
+                    direction_replace = input('<direction of your file>, <search string>, <replace string>: ')\
+                        .replace(' ', '').split(',')
+                    print(len(direction_replace))
+                    if len(direction_replace) > 3:
+                        print('Enter the correct parameters')
+                        continue
                     args = argparse.Namespace(files_name=direction_replace[0], string_for_search=direction_replace[1],
-                                              string_for_replace=direction_replace[2])
+                                              string_for_replace=direction_replace[2], mod=mod, string_for_count='def')
                     print(files_func(args))
+                    args.string_for_search = args.string_for_replace = 'def'
                 except IndexError:
                     print('Enter the correct parameters')
                     continue
-                except IsADirectoryError:
-                    print('Is a directory')
             else:
                 break
 
