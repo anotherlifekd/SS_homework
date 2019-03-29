@@ -11,7 +11,7 @@ def menu():
         if args.choose == 'chess':
             chess.chess(args)
         if args.choose == 'analytics':
-            analytics.analytics(args)
+            analytics.analytics_cycle(args)
         if args.choose == 'geron_triangle':
             geron_triangle.geron_triangle(args)
         if args.choose == 'files':
